@@ -1,0 +1,72 @@
+header {
+  padding: 0 20px;
+  width: 100%;
+  height: 80px;
+  background: #6c6ceb; /* rgb(108,108,235) but hex is cleaner */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .left {
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+header nav .right ul {
+  display: flex;
+  gap: 30px; /* space between menu items */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+}
+
+header nav .right ul li {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+header nav .right ul li:hover {
+  color: #d1d1ff; /* lighter shade on hover */
+}
+
+header nav .right ul li a {
+  text-decoration: none;
+  color: inherit; /* inherit white */
+  transition: color 0.3s ease;
+}
+
+header nav .right ul li a:hover {
+  color: #d1d1ff;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  header nav .right ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
